@@ -19,7 +19,9 @@ pipeline
     }
     stage('Deploying Stage')
     {
-      build job: 'Package_Application_Deploy_Pipeline'
+     steps{
+       build job: 'Package_Application_Deploy_Pipeline'
+     }
     }
   }
 }
