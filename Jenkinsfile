@@ -10,9 +10,10 @@ pipeline
       }
       post
       {
-         success
+        success
         {
           echo "Nov Archiving the Artifacts.."
+          copyArtifactPermission("*")
           archiveArtifacts artifacts: '**/*.jar'
         }
       }
