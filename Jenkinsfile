@@ -17,10 +17,8 @@ pipeline
         }
       }
     }
-    stage('Deploy in Staging Env')
-    { 
-      build job: 'Deploy-App-Staging-Env'        
+    stage('Deploy in Staging Env'){ 
+      build job: 'Deploy-App-Staging-Env'}
     }
-    }
-  }
+}
 
