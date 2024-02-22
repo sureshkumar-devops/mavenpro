@@ -10,8 +10,15 @@ pipeline
       post{
        success{
           echo "Nov Archiving the Artifacts.."
-          archiveArtifacts artifacts: '**/*.jar'
+          archiveArtifacts artifacts: '**/*.war'
        }
+      }
+      stage('Deploy in Staging Env')
+      {
+        steps{
+          build job: 'Deploy-App-Staging-Env'
+
+        }
       }
     }
   }
