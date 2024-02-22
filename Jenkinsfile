@@ -17,5 +17,9 @@ pipeline
         }
       }
     }
+    stage('Deploying Stage')
+    {
+      build job: 'Package_Application_Deploy_Pipeline'
+    }
   }
 }
