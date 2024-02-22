@@ -2,7 +2,7 @@ job('FirstMaveJob-2024')
 {
   description("First Maven Job gernerated..")
   scm{
-    git("https://github.com/sureshkumar-devops/mavenpro.git", master)
+    git("https://github.com/sureshkumar-devops/mavenpro.git", 'master')
   }
   trigger{
     scm('* * * * * ')
@@ -14,3 +14,8 @@ job('FirstMaveJob-2024')
     archiveArtifacts '**/*.jar'
   }
 }
+
+
+    
+    
+    
